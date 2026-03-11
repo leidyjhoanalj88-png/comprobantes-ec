@@ -14,12 +14,8 @@
   --success: #22c55e; --accent: #6c63ff; --danger: #ff4d4d;
 }
 body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
-
-/* SCREENS */
 .screen { display: none; min-height: 100vh; }
 .screen.active { display: flex; flex-direction: column; align-items: center; }
-
-/* ---- LOGIN ---- */
 #screen-login {
   justify-content: center; padding: 20px;
   background: radial-gradient(ellipse at 60% 20%, rgba(108,99,255,0.18) 0%, transparent 60%),
@@ -66,8 +62,6 @@ body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--t
 .pin-key.enter { background: var(--accent); border-color: var(--accent); color: white; }
 .pin-key.enter:hover { background: #5a52e0; }
 .login-error { color: var(--danger); font-size: 0.8rem; margin-bottom: 8px; min-height: 20px; font-weight: 600; }
-
-/* ---- NAVBAR ---- */
 .navbar {
   width: 100%; background: var(--card); border-bottom: 1px solid var(--border);
   padding: 12px 24px; display: flex; align-items: center; justify-content: space-between;
@@ -91,8 +85,6 @@ body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--t
   background: transparent; color: var(--muted); font-size: 0.78rem; cursor: pointer; transition: all 0.2s;
 }
 .btn-logout:hover { border-color: var(--danger); color: var(--danger); }
-
-/* ---- ADMIN ---- */
 #screen-admin { padding-bottom: 40px; }
 .content { width: 100%; max-width: 1000px; padding: 24px 20px; }
 .admin-tabs { display: flex; gap: 6px; margin-bottom: 24px; flex-wrap: wrap; }
@@ -105,13 +97,11 @@ body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--t
 .tab-btn:hover:not(.active) { border-color: var(--muted); color: var(--text); }
 .tab-panel { display: none; }
 .tab-panel.active { display: block; }
-
 .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 14px; margin-bottom: 28px; }
 .stat-card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 20px; }
 .stat-label { font-size: 0.72rem; color: var(--muted); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px; }
 .stat-value { font-family: 'Nunito', sans-serif; font-size: 1.8rem; font-weight: 900; color: var(--text); }
 .stat-sub { font-size: 0.72rem; color: var(--muted); margin-top: 4px; }
-
 .table-wrap { background: var(--card); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; }
 .table-header {
   padding: 16px 20px; border-bottom: 1px solid var(--border);
@@ -126,7 +116,6 @@ th {
 td { padding: 12px 16px; font-size: 0.85rem; border-bottom: 1px solid rgba(42,42,56,0.5); vertical-align: middle; }
 tr:last-child td { border-bottom: none; }
 tr:hover td { background: rgba(255,255,255,0.02); }
-
 .badge-role { display: inline-block; padding: 2px 10px; border-radius: 20px; font-size: 0.7rem; font-weight: 700; font-family: 'Nunito', sans-serif; }
 .badge-role.admin { background: rgba(245,197,24,0.15); color: #f5c518; }
 .badge-role.user { background: rgba(108,99,255,0.15); color: #a89eff; }
@@ -134,15 +123,12 @@ tr:hover td { background: rgba(255,255,255,0.02); }
 .badge-status.activo { background: rgba(34,197,94,0.15); color: #22c55e; }
 .badge-status.inactivo { background: rgba(255,77,77,0.12); color: #ff7070; }
 .badge-status::before { content: '●'; font-size: 0.5rem; }
-
 .btn-sm {
   padding: 5px 12px; border-radius: 7px; border: 1px solid var(--border);
   background: transparent; color: var(--muted); font-size: 0.75rem; cursor: pointer;
   font-family: 'DM Sans', sans-serif; transition: all 0.2s; margin-right: 4px;
 }
 .btn-sm:hover { border-color: var(--accent); color: var(--text); }
-.btn-sm.danger:hover { border-color: var(--danger); color: var(--danger); }
-
 .section-card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 24px; margin-bottom: 20px; }
 .section-card-title { font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 0.95rem; margin-bottom: 18px; }
 .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
@@ -164,7 +150,6 @@ tr:hover td { background: rgba(255,255,255,0.02); }
 .form-msg { font-size: 0.8rem; margin-top: 10px; min-height: 20px; font-weight: 600; }
 .form-msg.ok { color: var(--success); }
 .form-msg.err { color: var(--danger); }
-
 .log-item { display: flex; justify-content: space-between; align-items: center; padding: 12px 16px; border-bottom: 1px solid rgba(42,42,56,0.5); gap: 12px; flex-wrap: wrap; }
 .log-item:last-child { border-bottom: none; }
 .log-bank { font-size: 0.78rem; font-weight: 700; }
@@ -174,8 +159,6 @@ tr:hover td { background: rgba(255,255,255,0.02); }
 .log-monto { font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 0.95rem; color: var(--success); }
 .log-user { font-size: 0.75rem; color: var(--muted); }
 .log-date { font-size: 0.72rem; color: var(--muted); }
-
-/* ---- APP GENERADOR ---- */
 #screen-app { padding-bottom: 40px; }
 #screen-app .content { max-width: 940px; }
 .app-header { margin-bottom: 20px; }
@@ -234,8 +217,6 @@ select option { background: #1a1a22; }
 .btn-download { padding: 11px 22px; border-radius: 12px; border: none; cursor: pointer; font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 0.88rem; transition: all 0.2s; display: flex; align-items: center; gap: 6px; }
 .btn-png { background: rgba(108,99,255,0.15); border: 1px solid rgba(108,99,255,0.4); color: #a89eff; }
 .btn-png:hover { background: rgba(108,99,255,0.25); }
-
-/* ---- COMPROBANTE PICHINCHA ---- */
 .comp-pichincha { background: white; border-radius: 18px; overflow: hidden; width: 100%; font-family: 'DM Sans', sans-serif; box-shadow: 0 20px 60px rgba(0,0,0,0.5); }
 .comp-pichincha .cp-header { background: white; padding: 20px 20px 10px; display: flex; align-items: center; justify-content: center; border-bottom: 1px solid #f0f0f0; }
 .cp-bank-logo { display: flex; align-items: center; gap: 8px; font-family: 'Nunito', sans-serif; font-weight: 900; font-size: 1rem; color: #1a2040; }
@@ -260,8 +241,6 @@ select option { background: #1a1a22; }
 .cp-key-bold { font-size: 0.85rem !important; font-weight: 700 !important; color: #3a3a3a !important; }
 .cp-val-bold { font-size: 0.9rem !important; font-weight: 700 !important; color: #3a3a3a !important; }
 .cp-row-last { border-bottom: none !important; }
-
-/* ---- COMPROBANTE GUAYAQUIL ---- */
 .comp-guayaquil { background: #f7f7f7; border-radius: 18px; overflow: hidden; width: 100%; font-family: 'DM Sans', sans-serif; box-shadow: 0 20px 60px rgba(0,0,0,0.5); }
 .cg-header { background: white; padding: 18px 20px; display: flex; justify-content: space-between; align-items: center; }
 .cg-bank-logo { display: flex; align-items: center; gap: 10px; font-family: 'Nunito', sans-serif; font-weight: 900; font-size: 0.95rem; color: #e8106a; line-height: 1.2; }
@@ -287,17 +266,8 @@ select option { background: #1a1a22; }
 .cg-fee-row { display: flex; justify-content: space-between; padding: 5px 0; }
 .cg-fee-key { font-size: 0.8rem; color: #888; }
 .cg-fee-val { font-size: 0.85rem; color: #1a2040; font-weight: 600; }
-
-/* ---- MODAL ---- */
-.modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.7); backdrop-filter: blur(4px); z-index: 999; align-items: center; justify-content: center; }
-.modal-overlay.open { display: flex; }
-.modal { background: var(--card); border: 1px solid var(--border); border-radius: 20px; padding: 28px; width: 90%; max-width: 420px; }
-.modal-title { font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 1rem; margin-bottom: 18px; }
-.modal-footer { display: flex; gap: 10px; justify-content: flex-end; margin-top: 20px; }
-.btn-cancel { padding: 9px 18px; border-radius: 10px; border: 1px solid var(--border); background: transparent; color: var(--muted); font-family: 'DM Sans', sans-serif; font-size: 0.85rem; cursor: pointer; }
-.modal .form-group { margin-bottom: 14px; }
-.modal .form-group input, .modal .form-group select { margin-bottom: 0; }
-
+.info-box { background: rgba(108,99,255,0.1); border: 1px solid rgba(108,99,255,0.3); border-radius: 12px; padding: 14px 18px; margin-bottom: 20px; font-size: 0.82rem; color: #a89eff; line-height: 1.6; }
+.info-box strong { color: var(--text); }
 @media (max-width: 600px) {
   .app-wrapper { flex-direction: column; }
   .form-panel, .preview-panel { flex: none; width: 100%; }
@@ -355,60 +325,23 @@ select option { background: #1a1a22; }
     </div>
   </nav>
   <div class="content">
+    <div class="info-box">
+      ⚙️ <strong>Panel de administración</strong> · Los usuarios están definidos en el código. Para agregar o modificar usuarios, edita la sección <code>USUARIOS_DB</code> en el archivo HTML y vuelve a subir a GitHub.
+    </div>
     <div class="admin-tabs">
       <button class="tab-btn active" onclick="showTab('tab-stats',this)">📊 Estadísticas</button>
       <button class="tab-btn" onclick="showTab('tab-usuarios',this)">👥 Usuarios</button>
-      <button class="tab-btn" onclick="showTab('tab-crear',this)">➕ Crear usuario</button>
-      <button class="tab-btn" onclick="showTab('tab-logs',this)">📋 Comprobantes</button>
     </div>
-
-    <!-- STATS -->
     <div class="tab-panel active" id="tab-stats">
       <div class="stats-grid" id="stats-grid"></div>
-      <div class="table-wrap">
-        <div class="table-header"><span class="table-title">Actividad reciente</span></div>
-        <div id="logs-list-stats"></div>
-      </div>
     </div>
-
-    <!-- USUARIOS -->
     <div class="tab-panel" id="tab-usuarios">
       <div class="table-wrap">
-        <div class="table-header">
-          <span class="table-title">Todos los usuarios</span>
-          <input type="text" id="search-users" placeholder="🔍 Buscar..." oninput="renderUsersTable()"
-            style="padding:7px 12px;border-radius:8px;border:1px solid var(--border);background:rgba(255,255,255,0.04);color:var(--text);font-size:0.82rem;outline:none;width:180px;margin-bottom:0;">
-        </div>
+        <div class="table-header"><span class="table-title">Todos los usuarios</span></div>
         <table>
-          <thead><tr><th>Usuario</th><th>Nombre</th><th>Rol</th><th>Estado</th><th>Comprobantes</th><th>Acciones</th></tr></thead>
+          <thead><tr><th>Usuario</th><th>Nombre</th><th>Rol</th><th>Estado</th></tr></thead>
           <tbody id="users-tbody"></tbody>
         </table>
-      </div>
-    </div>
-
-    <!-- CREAR -->
-    <div class="tab-panel" id="tab-crear">
-      <div class="section-card">
-        <div class="section-card-title">➕ Crear nuevo usuario</div>
-        <div class="form-grid">
-          <div class="form-group"><label>Nombre completo</label><input type="text" id="new-nombre" placeholder="Juan Pérez"></div>
-          <div class="form-group"><label>Usuario (login)</label><input type="text" id="new-user" placeholder="juan.perez" autocomplete="off"></div>
-          <div class="form-group"><label>PIN (6 dígitos numéricos)</label><input type="password" id="new-pin" placeholder="••••••" maxlength="6" autocomplete="off"></div>
-          <div class="form-group"><label>Rol</label><select id="new-rol"><option value="user">Usuario</option><option value="admin">Administrador</option></select></div>
-        </div>
-        <button class="btn-primary" onclick="crearUsuario()">✅ Crear usuario</button>
-        <div class="form-msg" id="crear-msg"></div>
-      </div>
-    </div>
-
-    <!-- LOGS -->
-    <div class="tab-panel" id="tab-logs">
-      <div class="table-wrap">
-        <div class="table-header">
-          <span class="table-title">Historial de comprobantes</span>
-          <span id="logs-count" style="font-size:0.78rem;color:var(--muted);">0 registros</span>
-        </div>
-        <div id="logs-list-full"></div>
       </div>
     </div>
   </div>
@@ -477,46 +410,22 @@ select option { background: #1a1a22; }
   </div>
 </div>
 
-<!-- MODAL EDITAR -->
-<div class="modal-overlay" id="modal-edit">
-  <div class="modal">
-    <div class="modal-title">✏️ Editar usuario</div>
-    <input type="hidden" id="edit-user-id">
-    <div class="form-group"><label>Nombre completo</label><input type="text" id="edit-nombre"></div>
-    <div class="form-group"><label>Nuevo PIN (dejar vacío para no cambiar)</label><input type="password" id="edit-pin" placeholder="••••••" maxlength="6" autocomplete="off"></div>
-    <div class="form-group"><label>Estado</label><select id="edit-estado"><option value="activo">Activo</option><option value="inactivo">Inactivo</option></select></div>
-    <div class="form-msg" id="edit-msg"></div>
-    <div class="modal-footer">
-      <button class="btn-cancel" onclick="closeModal()">Cancelar</button>
-      <button class="btn-primary" style="margin-top:0" onclick="guardarEdicion()">Guardar cambios</button>
-    </div>
-  </div>
-</div>
-
 <script>
-// ============ BASE DE DATOS ============
-const DB_DEFAULT = {
-  users: [
-    { id:1, username:'admin', nombre:'Administrador', pin:'123456', rol:'admin', estado:'activo', comprobantes:0 },
-    { id:2, username:'usuario1', nombre:'Carlos Mendoza', pin:'111111', rol:'user', estado:'activo', comprobantes:0 },
-  ],
-  logs: [],
-  nextId: 3
-};
+// ============================================================
+// USUARIOS_DB — EDITA AQUÍ PARA AGREGAR O CAMBIAR USUARIOS
+// rol: 'admin' ve el panel de administración
+// rol: 'user' va directo al generador
+// estado: 'activo' o 'inactivo'
+// ============================================================
+const USUARIOS_DB = [
+  { id:1, username:'admin',    nombre:'Administrador',  pin:'123456', rol:'admin', estado:'activo' },
+  { id:2, username:'carlos',   nombre:'Carlos Mendoza', pin:'111111', rol:'user',  estado:'activo' },
+  { id:3, username:'maria',    nombre:'María López',    pin:'222222', rol:'user',  estado:'activo' },
+  // Agrega más usuarios aquí con el mismo formato:
+  // { id:4, username:'nuevo', nombre:'Nombre Completo', pin:'333333', rol:'user', estado:'activo' },
+];
+// ============================================================
 
-function loadDB() {
-  try {
-    const saved = localStorage.getItem('comprobantes_ec_db');
-    if (saved) return JSON.parse(saved);
-  } catch(e) {}
-  return JSON.parse(JSON.stringify(DB_DEFAULT));
-}
-
-function saveDB() {
-  try { localStorage.setItem('comprobantes_ec_db', JSON.stringify(db)); } catch(e) {}
-}
-
-let db = loadDB();
 let currentUser = null;
 let currentBank = 'pichincha';
 let currentTipo = 'transferencia';
@@ -536,7 +445,7 @@ function updatePinDisplay() {
 function resetLoginError() { document.getElementById('login-error').textContent=''; }
 function doLogin() {
   const uname = document.getElementById('login-user').value.trim().toLowerCase();
-  const user = db.users.find(u => u.username.toLowerCase()===uname && u.pin===pinBuffer && u.estado==='activo');
+  const user = USUARIOS_DB.find(u => u.username.toLowerCase()===uname && u.pin===pinBuffer && u.estado==='activo');
   if (!user) {
     document.getElementById('login-error').textContent = '❌ Usuario o PIN incorrecto';
     pinBuffer=''; updatePinDisplay(); return;
@@ -569,113 +478,25 @@ function showTab(tabId, btn) {
   if(btn) btn.classList.add('active');
   if(tabId==='tab-stats') renderStats();
   if(tabId==='tab-usuarios') renderUsersTable();
-  if(tabId==='tab-logs') renderLogsAdmin();
 }
-function renderAdmin() { renderStats(); renderUsersTable(); renderLogsAdmin(); }
-
+function renderAdmin() { renderStats(); renderUsersTable(); }
 function renderStats() {
-  const total = db.users.length;
-  const activos = db.users.filter(u=>u.estado==='activo').length;
-  const admins = db.users.filter(u=>u.rol==='admin').length;
-  const totalLogs = db.logs.length;
-  const pich = db.logs.filter(l=>l.banco==='pichincha').length;
-  const guay = db.logs.filter(l=>l.banco==='guayaquil').length;
+  const total = USUARIOS_DB.length;
+  const activos = USUARIOS_DB.filter(u=>u.estado==='activo').length;
+  const admins = USUARIOS_DB.filter(u=>u.rol==='admin').length;
   document.getElementById('stats-grid').innerHTML = `
     <div class="stat-card"><div class="stat-label">Total usuarios</div><div class="stat-value">${total}</div><div class="stat-sub">${activos} activos · ${admins} admin</div></div>
-    <div class="stat-card"><div class="stat-label">Comprobantes generados</div><div class="stat-value">${totalLogs}</div><div class="stat-sub">Todos los usuarios</div></div>
-    <div class="stat-card"><div class="stat-label">Banco Pichincha</div><div class="stat-value" style="color:var(--pichincha-yellow)">${pich}</div><div class="stat-sub">comprobantes</div></div>
-    <div class="stat-card"><div class="stat-label">Banco Guayaquil</div><div class="stat-value" style="color:var(--guayaquil-pink)">${guay}</div><div class="stat-sub">comprobantes</div></div>`;
-  const recent = [...db.logs].reverse().slice(0,5);
-  document.getElementById('logs-list-stats').innerHTML = recent.length
-    ? recent.map(logItem).join('')
-    : '<div style="padding:24px;text-align:center;color:var(--muted);font-size:0.85rem;">Sin registros aún</div>';
+    <div class="stat-card"><div class="stat-label">Usuarios activos</div><div class="stat-value" style="color:var(--success)">${activos}</div><div class="stat-sub">pueden iniciar sesión</div></div>
+    <div class="stat-card"><div class="stat-label">Administradores</div><div class="stat-value" style="color:var(--pichincha-yellow)">${admins}</div><div class="stat-sub">con acceso al panel</div></div>`;
 }
-
-function logItem(l) {
-  return `<div class="log-item">
-    <div>
-      <div class="log-bank ${l.banco}">${l.banco==='pichincha'?'🟨 Pichincha':'🩷 Guayaquil'} · ${l.tipo}</div>
-      <div class="log-info">${l.origenNombre} → ${l.destinoNombre}</div>
-    </div>
-    <div style="text-align:right">
-      <div class="log-monto">$${l.monto}</div>
-      <div class="log-user">@${l.usuario}</div>
-      <div class="log-date">${l.fecha}</div>
-    </div>
-  </div>`;
-}
-
 function renderUsersTable() {
-  const q = (document.getElementById('search-users')?.value||'').toLowerCase();
-  const filtered = db.users.filter(u => u.username.toLowerCase().includes(q)||u.nombre.toLowerCase().includes(q));
-  document.getElementById('users-tbody').innerHTML = filtered.map(u => `
+  document.getElementById('users-tbody').innerHTML = USUARIOS_DB.map(u => `
     <tr>
       <td><code style="color:var(--accent);font-size:0.82rem">@${u.username}</code></td>
       <td>${u.nombre}</td>
       <td><span class="badge-role ${u.rol}">${u.rol}</span></td>
       <td><span class="badge-status ${u.estado}">${u.estado}</span></td>
-      <td style="text-align:center">${u.comprobantes}</td>
-      <td>
-        <button class="btn-sm" onclick="openEditModal(${u.id})">✏️ Editar</button>
-        ${u.username!=='admin'?`<button class="btn-sm danger" onclick="toggleStatus(${u.id})">${u.estado==='activo'?'🔴 Desactivar':'🟢 Activar'}</button>`:''}
-      </td>
     </tr>`).join('');
-}
-
-function renderLogsAdmin() {
-  const all = [...db.logs].reverse();
-  document.getElementById('logs-count').textContent = all.length+' registros';
-  document.getElementById('logs-list-full').innerHTML = all.length
-    ? all.map(logItem).join('')
-    : '<div style="padding:24px;text-align:center;color:var(--muted);font-size:0.85rem;">Sin comprobantes generados aún</div>';
-}
-
-function crearUsuario() {
-  const nombre = document.getElementById('new-nombre').value.trim();
-  const username = document.getElementById('new-user').value.trim().toLowerCase();
-  const pin = document.getElementById('new-pin').value.trim();
-  const rol = document.getElementById('new-rol').value;
-  const msg = document.getElementById('crear-msg');
-  if (!nombre||!username||!pin) { msg.className='form-msg err'; msg.textContent='❌ Completa todos los campos.'; return; }
-  if (!/^\d{6}$/.test(pin)) { msg.className='form-msg err'; msg.textContent='❌ El PIN debe ser exactamente 6 dígitos numéricos.'; return; }
-  if (db.users.find(u=>u.username===username)) { msg.className='form-msg err'; msg.textContent='❌ Ese nombre de usuario ya existe.'; return; }
-  db.users.push({id:db.nextId++,username,nombre,pin,rol,estado:'activo',comprobantes:0});
-  saveDB();
-  msg.className='form-msg ok'; msg.textContent=`✅ Usuario @${username} creado correctamente.`;
-  document.getElementById('new-nombre').value='';
-  document.getElementById('new-user').value='';
-  document.getElementById('new-pin').value='';
-  renderUsersTable(); renderStats();
-}
-
-function toggleStatus(id) {
-  const u = db.users.find(u=>u.id===id);
-  if(u){ u.estado=u.estado==='activo'?'inactivo':'activo'; saveDB(); renderUsersTable(); renderStats(); }
-}
-
-function openEditModal(id) {
-  const u = db.users.find(u=>u.id===id);
-  if(!u) return;
-  document.getElementById('edit-user-id').value=id;
-  document.getElementById('edit-nombre').value=u.nombre;
-  document.getElementById('edit-pin').value='';
-  document.getElementById('edit-estado').value=u.estado;
-  document.getElementById('edit-msg').textContent='';
-  document.getElementById('modal-edit').classList.add('open');
-}
-function closeModal() { document.getElementById('modal-edit').classList.remove('open'); }
-function guardarEdicion() {
-  const id=parseInt(document.getElementById('edit-user-id').value);
-  const u=db.users.find(u=>u.id===id);
-  const nombre=document.getElementById('edit-nombre').value.trim();
-  const pin=document.getElementById('edit-pin').value.trim();
-  const estado=document.getElementById('edit-estado').value;
-  const msg=document.getElementById('edit-msg');
-  if(!nombre){msg.className='form-msg err';msg.textContent='❌ El nombre no puede estar vacío.';return;}
-  if(pin&&!/^\d{6}$/.test(pin)){msg.className='form-msg err';msg.textContent='❌ El PIN debe ser 6 dígitos.';return;}
-  u.nombre=nombre; u.estado=estado; if(pin) u.pin=pin;
-  msg.className='form-msg ok'; msg.textContent='✅ Guardado correctamente.';
-  setTimeout(closeModal,800); renderUsersTable(); renderStats();
 }
 
 // ============ APP ============
@@ -716,7 +537,7 @@ function getData() {
   return {
     monto,comision,valorDebitado,montoRaw,comisionRaw,
     comprobante:document.getElementById('comprobante').value||generarComprobante(),
-    fecha:fechaStr||'10 Mar 2026',fechaRaw,hora,
+    fecha:fechaStr||'11 Mar 2026',fechaRaw,hora,
     origenNombre:document.getElementById('origen-nombre').value||'Nombre Origen',
     origenCuenta:document.getElementById('origen-cuenta').value||'******0000',
     destinoNombre:document.getElementById('destino-nombre').value||'Nombre Destino',
@@ -754,7 +575,7 @@ function buildPichincha(d) {
 function buildGuayaquil(d) {
   const isInstant=(currentTipo==='interna'||currentTipo==='transferencia');
   const badgeText=isInstant?'⚡ Tu transferencia llegará de forma inmediata':'ℹ️ Esta transacción puede tardar hasta 20 min.';
-  const fechaGuayaquil=d.fechaRaw?(()=>{const dd=new Date(d.fechaRaw+'T00:00:00');const p=n=>String(n).padStart(2,'0');return`${p(dd.getDate())}/${p(dd.getMonth()+1)}/${dd.getFullYear()} ${d.hora}:00`;})():`10/03/2026 ${d.hora}:00`;
+  const fechaGuayaquil=d.fechaRaw?(()=>{const dd=new Date(d.fechaRaw+'T00:00:00');const p=n=>String(n).padStart(2,'0');return`${p(dd.getDate())}/${p(dd.getMonth()+1)}/${dd.getFullYear()} ${d.hora}:00`;})():`11/03/2026 ${d.hora}:00`;
   const tipoTexto=currentTipo==='interna'?'TRANSFERENCIA INTERNA OTRAS CTAS':currentTipo==='pago'?'PAGO TARJETA':'TRANSFERENCIA ENVIADA';
   const origenTipo=currentTipo==='pago'?'Cuenta':'Ahorros';
   const destinoTipo=currentTipo==='pago'?'Corriente':'Banco Guayaquil Corriente';
@@ -765,14 +586,8 @@ function updatePreview() {
   document.getElementById('comprobante-wrapper').innerHTML=currentBank==='pichincha'?buildPichincha(d):buildGuayaquil(d);
 }
 async function downloadPNG() {
-  const d=getData();
   const el=document.getElementById('comprobante-wrapper').firstElementChild;
   if(!el) return;
-  if(currentUser){
-    db.logs.push({banco:currentBank,tipo:currentTipo,monto:d.monto,comprobante:d.comprobante,origenNombre:d.origenNombre,destinoNombre:d.destinoNombre,usuario:currentUser.username,fecha:new Date().toLocaleString('es-EC')});
-    currentUser.comprobantes++;
-    saveDB();
-  }
   const canvas=await html2canvas(el,{scale:3,backgroundColor:null,useCORS:true});
   const link=document.createElement('a');
   link.download=`comprobante_${currentBank}_${Date.now()}.png`;
